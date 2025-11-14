@@ -53,14 +53,6 @@ const animationObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
-
-        // Add staggered animation for children in skill columns
-        if (entry.target.classList.contains("skills-column")) {
-          const skillBadges = entry.target.querySelectorAll(".skill-badge");
-          skillBadges.forEach((badge, index) => {
-            badge.style.transitionDelay = `${index * 0.1}s`;
-          });
-        }
       }
     });
   },
@@ -160,9 +152,3 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
-
-// Enhanced skill badges random entrance delay
-document.querySelectorAll(".skill-badge").forEach((badge, index) => {
-  const randomDelay = Math.random() * 0.5;
-  badge.style.animationDelay = `${randomDelay}s`;
-});
