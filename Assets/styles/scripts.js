@@ -98,18 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add hover effect to hero image
-  const heroImage = document.querySelector(".hero-content img");
-  if (heroImage) {
-    heroImage.addEventListener("mouseenter", () => {
-      heroImage.style.transform = "scale(1.05)";
-    });
-
-    heroImage.addEventListener("mouseleave", () => {
-      heroImage.style.transform = "scale(1)";
-    });
-  }
-
   // Enhanced button click effects
   document.querySelectorAll(".btn").forEach((button) => {
     button.addEventListener("click", function (e) {
