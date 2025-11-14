@@ -9,16 +9,17 @@ window.addEventListener("scroll", function () {
 });
 
 // Smooth scrolling with offset
-document.querySelectorAll("nav a:not([href^='mailto:'])").forEach(link => {
-  link.addEventListener("click", event => {
+document.querySelectorAll("nav a:not([href^='mailto:'])").forEach((link) => {
+  link.addEventListener("click", (event) => {
     event.preventDefault();
     const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
-      const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset - 80;
+      const offsetTop =
+        targetSection.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({
         top: offsetTop,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   });
@@ -27,16 +28,16 @@ document.querySelectorAll("nav a:not([href^='mailto:'])").forEach(link => {
 // Active class handling based on scroll position
 const navLinks = document.querySelectorAll("nav a:not([href^='mailto:'])");
 const sections = Array.from(document.querySelectorAll("section")).filter(
-  section => section.id
+  (section) => section.id
 );
 
 const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
+  (entries) => {
+    entries.forEach((entry) => {
       const id = entry.target.id;
       const navLink = document.querySelector(`nav a[href="#${id}"]`);
       if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove("active"));
+        navLinks.forEach((link) => link.classList.remove("active"));
         if (navLink) navLink.classList.add("active");
       }
     });
@@ -44,7 +45,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.3, rootMargin: "0px 0px -40% 0px" }
 );
 
-sections.forEach(section => observer.observe(section));
+sections.forEach((section) => observer.observe(section));
 
 // Scroll-triggered animations
 const animationObserver = new IntersectionObserver(
@@ -52,10 +53,10 @@ const animationObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
-        
+
         // Add staggered animation for children in skill columns
-        if (entry.target.classList.contains('skills-column')) {
-          const skillBadges = entry.target.querySelectorAll('.skill-badge');
+        if (entry.target.classList.contains("skills-column")) {
+          const skillBadges = entry.target.querySelectorAll(".skill-badge");
           skillBadges.forEach((badge, index) => {
             badge.style.transitionDelay = `${index * 0.1}s`;
           });
@@ -65,68 +66,68 @@ const animationObserver = new IntersectionObserver(
   },
   {
     threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
+    rootMargin: "0px 0px -50px 0px",
   }
 );
 
 // Observe all elements with animation classes
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Observe animated elements
   const animatedElements = document.querySelectorAll(
-    '.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .timeline-item, .skills-column'
+    ".fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .timeline-item, .skills-column"
   );
-  
-  animatedElements.forEach(el => {
+
+  animatedElements.forEach((el) => {
     animationObserver.observe(el);
   });
 
   // Add animation classes to elements
-  document.querySelectorAll('.timeline-item').forEach(el => {
-    el.classList.add('fade-in-left');
+  document.querySelectorAll(".timeline-item").forEach((el) => {
+    el.classList.add("fade-in-left");
   });
 
-  document.querySelectorAll('.skills-column').forEach(el => {
-    el.classList.add('fade-in-up');
+  document.querySelectorAll(".skills-column").forEach((el) => {
+    el.classList.add("fade-in-up");
   });
 
-  document.querySelectorAll('.project-card').forEach(el => {
-    el.classList.add('scale-in');
+  document.querySelectorAll(".project-card").forEach((el) => {
+    el.classList.add("scale-in");
   });
 
   // Image loading animation
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
+  const images = document.querySelectorAll("img");
+  images.forEach((img) => {
     if (img.complete) {
-      img.classList.add('loaded');
+      img.classList.add("loaded");
     } else {
-      img.addEventListener('load', () => {
-        img.classList.add('loaded');
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
       });
     }
   });
 
   // Add hover effect to hero image
-  const heroImage = document.querySelector('.hero-content img');
+  const heroImage = document.querySelector(".hero-content img");
   if (heroImage) {
-    heroImage.addEventListener('mouseenter', () => {
-      heroImage.style.transform = 'scale(1.05)';
+    heroImage.addEventListener("mouseenter", () => {
+      heroImage.style.transform = "scale(1.05)";
     });
-    
-    heroImage.addEventListener('mouseleave', () => {
-      heroImage.style.transform = 'scale(1)';
+
+    heroImage.addEventListener("mouseleave", () => {
+      heroImage.style.transform = "scale(1)";
     });
   }
 
   // Enhanced button click effects
-  document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
+  document.querySelectorAll(".btn").forEach((button) => {
+    button.addEventListener("click", function (e) {
       // Create ripple effect
-      const ripple = document.createElement('span');
+      const ripple = document.createElement("span");
       const rect = this.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
       const x = e.clientX - rect.left - size / 2;
       const y = e.clientY - rect.top - size / 2;
-      
+
       ripple.style.cssText = `
         position: absolute;
         border-radius: 50%;
@@ -138,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
         left: ${x}px;
         top: ${y}px;
       `;
-      
+
       this.appendChild(ripple);
-      
+
       setTimeout(() => {
         ripple.remove();
       }, 600);
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add ripple animation keyframes via JavaScript
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
   @keyframes ripple {
     to {
@@ -160,18 +161,8 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect for hero section
-window.addEventListener('scroll', function() {
-  const scrolled = window.pageYOffset;
-  const hero = document.getElementById('main-hero');
-  if (hero) {
-    const rate = scrolled * -0.5;
-    hero.style.transform = `translateY(${rate}px)`;
-  }
-});
-
 // Enhanced skill badges random entrance delay
-document.querySelectorAll('.skill-badge').forEach((badge, index) => {
+document.querySelectorAll(".skill-badge").forEach((badge, index) => {
   const randomDelay = Math.random() * 0.5;
   badge.style.animationDelay = `${randomDelay}s`;
 });
