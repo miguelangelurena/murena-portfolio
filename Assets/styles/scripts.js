@@ -28,7 +28,7 @@ document.querySelectorAll("nav a:not([href^='mailto:'])").forEach((link) => {
 // Active class handling based on scroll position
 const navLinks = document.querySelectorAll("nav a:not([href^='mailto:'])");
 const sections = Array.from(document.querySelectorAll("section")).filter(
-  (section) => section.id
+  (section) => section.id,
 );
 
 const observer = new IntersectionObserver(
@@ -42,7 +42,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3, rootMargin: "0px 0px -40% 0px" }
+  { threshold: 0.3, rootMargin: "0px 0px -40% 0px" },
 );
 
 sections.forEach((section) => observer.observe(section));
@@ -59,14 +59,14 @@ const animationObserver = new IntersectionObserver(
   {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
-  }
+  },
 );
 
 // Observe all elements with animation classes
 document.addEventListener("DOMContentLoaded", function () {
   // Observe animated elements
   const animatedElements = document.querySelectorAll(
-    ".fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .timeline-item, .skills-column"
+    ".fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .timeline-item, .skills-column",
   );
 
   animatedElements.forEach((el) => {
