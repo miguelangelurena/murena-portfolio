@@ -1,241 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Ureña | Full-Stack Developer Portfolio</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miguel Ureña | Full-Stack Developer Portfolio</title>
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Miguel Ureña – Full-stack developer portfolio. Explore projects in React, Node.js, Tailwind, and MongoDB. Open to freelance and remote opportunities."
+    />
+    <meta
+      name="keywords"
+      content="Miguel Ureña, Full-Stack Developer, React, Node.js, MongoDB, Tailwind, Portfolio, Web Developer, Remote Developer"
+    />
+    <meta name="author" content="Miguel Ureña" />
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Miguel Ureña – Full-stack developer portfolio. Explore projects in React, Node.js, Tailwind, and MongoDB. Open to freelance and remote opportunities.">
-  <meta name="keywords" content="Miguel Ureña, Full-Stack Developer, React, Node.js, MongoDB, Tailwind, Portfolio, Web Developer, Remote Developer">
-  <meta name="author" content="Miguel Ureña">
+    <!-- Open Graph (OG) -->
+    <meta
+      property="og:title"
+      content="Miguel Ureña | Full-Stack Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore Miguel's professional portfolio featuring cutting-edge projects and innovative solutions in software development."
+    />
+    <meta
+      property="og:image"
+      content="https://miguel-urena.vercel.app/assets/images/meta-picture.png"
+    />
+    <meta property="og:url" content="https://miguel-urena.vercel.app/" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph (OG) -->
-  <meta property="og:title" content="Miguel Ureña | Full-Stack Developer Portfolio" />
-  <meta property="og:description" content="Explore Miguel's professional portfolio featuring cutting-edge projects and innovative solutions in software development." />
-  <meta property="og:image" content="https://miguel-urena.vercel.app/assets/images/meta-picture.png" />
-  <meta property="og:url" content="https://miguel-urena.vercel.app/" />
-  <meta property="og:type" content="website" />
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Styles & Favicon -->
+    <link rel="stylesheet" href="/Assets/styles/styles.css" />
+    <link rel="icon" type="image/png" href="/Assets/Images/avatar.png" />
 
-  <!-- Styles & Favicon -->
-  <link rel="stylesheet" href="/Assets/styles/styles.css">
-  <link rel="icon" type="image/png" href="/Assets/Images/avatar.png">
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Miguel Ureña",
+        "url": "https://miguel-urena.vercel.app/",
+        "sameAs": [
+          "https://github.com/miguelangelurena",
+          "https://www.linkedin.com/in/miguel-%C3%A1ngel-ure%C3%B1a-2b32892b7/"
+        ],
+        "jobTitle": "Full-Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AlphaCom"
+        }
+      }
+    </script>
+  </head>
 
-  <!-- Structured Data (Schema.org JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Miguel Ureña",
-    "url": "https://miguel-urena.vercel.app/",
-    "sameAs": [
-      "https://github.com/miguelangelurena",
-      "https://www.linkedin.com/in/miguel-%C3%A1ngel-ure%C3%B1a-2b32892b7/"
-    ],
-    "jobTitle": "Full-Stack Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "AlphaCom"
-    }
-  }
-  </script>
-</head>
-
-<body>
-  <nav>
-    <div class="nav-container">
-      <ul>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="mailto:anguel_miguel31@hotmail.com">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <section id="main-hero">
-    <div class="hero-content">
-    <!--<img src="/Assets/Images/avatar.png" alt="Miguel Ureña smiling" loading="lazy" class="fade-in-up">-->
-      <h1 class="fade-in-up">Hi, I'm Miguel Ureña</h1>
-      <p class="fade-in-up">
-        I enjoy building <span class="highlight">dependable</span> and
-        <span class="highlight">scalable full-stack applications</span>
-        that combine smooth user experiences with
-        <span class="highlight">powerful back-end performance.</span>
-      </p>
-      <div class="hero-buttons fade-in-up">
-        <a href="mailto:anguel_miguel31@hotmail.com" class="btn secondary-btn">
-          <i class="fas fa-envelope"></i> Contact Me
-        </a>
-        <a href="https://www.linkedin.com/in/miguel-ure%C3%B1a-2b32892b7/" class="btn secondary-btn" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="mailto:anguel_miguel31@hotmail.com">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <section id="experience">
-    <div class="experience-header">
-      <i class="fas fa-briefcase"></i>
-      <h2>Work Experience</h2>
-    </div>
-    <div class="timeline">
-      <!-- ZitDevs -->
-      <div class="timeline-item fade-in-left">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3 class="job-title">Jr. Front-end Engineer</h3>
-          <img src="/Assets/Images/zitdevs.png" alt="ZitDevs Internship - Junior Front-End Engineer" loading="lazy">
-          <h4 class="company-name">ZitDevs (Internship)</h4>
-          <p class="description">
-            Developed modern, responsive web applications using React, Tailwind CSS, and Astro. Wrote efficient, reusable code, collaborated with design teams, and improved performance and cross-browser compatibility.
-          </p>
-          <a href="https://zitdevs.com/" target="_blank" class="see-more">See more</a>
+    <section id="main-hero">
+      <div class="hero-content">
+        <!--<img src="/Assets/Images/avatar.png" alt="Miguel Ureña smiling" loading="lazy" class="fade-in-up">-->
+        <h1 class="fade-in-up">Hi, I'm Miguel Ureña</h1>
+        <p class="fade-in-up">
+          I enjoy building <span class="highlight">dependable</span> and
+          <span class="highlight">scalable full-stack applications</span>
+          that combine smooth user experiences with
+          <span class="highlight">powerful back-end performance.</span>
+        </p>
+        <div class="hero-buttons fade-in-up">
+          <a
+            href="mailto:anguel_miguel31@hotmail.com"
+            class="btn secondary-btn"
+          >
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+          <a
+            href="https://www.linkedin.com/in/miguel-ure%C3%B1a-2b32892b7/"
+            class="btn secondary-btn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
-      <!-- AlphaCom -->
-      <div class="timeline-item fade-in-left">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3 class="job-title">IT Specialist</h3>
-          <img class="alphacom-logo" src="/Assets/Images/alphacomrd_logo.jpeg" alt="AlphaCom IT Specialist Role" loading="lazy">
-          <h4 class="company-name">AlphaCom</h4>
-          <p class="description">
-            Maintained, processed, and troubleshot computer systems and operations. Configured hardware/software for employees, managed IT helpdesk tickets, performed system backups, and supported IT projects and initiatives.
-          </p>
-          <span class="timeline-date">Currently working here.</span><br>
-          <a href="https://www.instagram.com/alphacom.rd/?hl=en" target="_blank" class="see-more">See more</a>
+    </section>
+
+    <section id="experience">
+      <div class="experience-header">
+        <i class="fas fa-briefcase"></i>
+        <h2>Work Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- AlphaCom -->
+        <div class="timeline-item fade-in-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-top">
+              <div class="tl-logo">
+                <img
+                  class="alphacom-logo"
+                  src="/Assets/Images/alphacomrd_logo.jpeg"
+                  alt="AlphaCom IT Specialist Role"
+                  loading="lazy"
+                />
+              </div>
+              <div class="tl-meta">
+                <h3 class="job-title">IT Specialist</h3>
+                <h4 class="company-name">AlphaCom</h4>
+              </div>
+              <span class="tl-badge badge-current">Current</span>
+            </div>
+            <p class="description">
+              I maintain, process, and troubleshoot computer systems and
+              operations. Configure hardware and software for employees, manage
+              IT helpdesk tickets, perform system backups, and support IT
+              projects and initiatives.
+            </p>
+            <div class="tl-footer">
+              <div class="tl-tags">
+                <span class="tl-tag">Hardware</span>
+                <span class="tl-tag">Networking</span>
+                <span class="tl-tag">Linux</span>
+                <span class="tl-tag">Helpdesk</span>
+              </div>
+              <a
+                href="https://www.instagram.com/alphacom.rd/?hl=en"
+                target="_blank"
+                class="see-more"
+                >See more</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- ZitDevs -->
+        <div class="timeline-item fade-in-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-top">
+              <div class="tl-logo">
+                <img
+                  src="/Assets/Images/zitdevs.png"
+                  alt="ZitDevs Internship - Junior Front-End Engineer"
+                  loading="lazy"
+                />
+              </div>
+              <div class="tl-meta">
+                <h3 class="job-title">Jr. Front-end Engineer</h3>
+                <h4 class="company-name">ZitDevs</h4>
+              </div>
+              <span class="tl-badge badge-past">Internship</span>
+            </div>
+            <p class="description">
+              Developed modern, responsive web applications using React,
+              Tailwind CSS, and Astro. Wrote efficient, reusable code,
+              collaborated with design teams, and improved performance and
+              cross-browser compatibility.
+            </p>
+            <div class="tl-footer">
+              <div class="tl-tags">
+                <span class="tl-tag">React</span>
+                <span class="tl-tag">Tailwind</span>
+                <span class="tl-tag">Astro</span>
+              </div>
+              <a href="https://zitdevs.com/" target="_blank" class="see-more"
+                >See more</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="skills-header">
-      <i class="fas fa-tools"></i>
-      <h2>Skills</h2>
-    </div>
-
-   <div class="skills-columns">
-  <div class="skills-column fade-in-up">
-    <h3>Front-End</h3>
-    <div class="skill-list">
-      <span class="skill-badge">React</span>
-      <span class="skill-badge">Astro</span>
-    <span class="skill-badge">Next.js</span>
-      <span class="skill-badge">JavaScript</span>
-      <span class="skill-badge">Tailwind</span>
-    </div>
-  </div>
-
-  <div class="skills-column fade-in-up">
-    <h3>Back-End</h3>
-    <div class="skill-list">
-     <span class="skill-badge">Node.js</span>
-     <span class="skill-badge">Express</span>
-      <span class="skill-badge">REST APIs</span>
-      <span class="skill-badge">MongoDB</span>
-      <span class="skill-badge">MySQL</span>
-      <span class="skill-badge">SupaBase</span>
-    </div>
-  </div>
-
-  <div class="skills-column fade-in-up">
-    <h3>Tools</h3>
-    <div class="skill-list">
-      <span class="skill-badge">Git</span>
-    <!--  <span class="skill-badge">Docker</span> -->
-      <span class="skill-badge">VSCode</span>
-      <span class="skill-badge">Figma</span>
-      <span class="skill-badge">Postman</span>
-    </div>
-  </div>
-
-  <div class="skills-column fade-in-up">
-    <h3>Other</h3>
-    <div class="skill-list">
-      <span class="skill-badge">Linux</span>
-      <span class="skill-badge">Networking</span>
-      <span class="skill-badge">Troubleshooting</span>
-    </div>
-  </div>
-</div>
-
-  <section id="projects">
-    <div class="projects-header">
-      <i class="fas fa-code"></i>
-      <h2>Projects</h2>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card scale-in">
-        <img src="/Assets/Images/3.png" alt="3Peso Project Logo" loading="lazy">
-        <h3 class="project-title">3Peso</h3>
-        <h4>Astro · Tailwind</h4>
-        <p class="project-description">
-          Dominican content group creating humorous and positive videos on platforms like YouTube and Instagram.
-        </p>
-        <a href="https://3-peso.vercel.app/" target="_blank" class="see-more">View Project</a>
+    <section id="skills">
+      <div class="skills-header">
+        <i class="fas fa-tools"></i>
+        <h2>Skills</h2>
       </div>
 
-      <div class="project-card scale-in">
-        <img src="/Assets/Images/nothirix-thumbnail.png" alt="Nothirix Real Estate Platform Thumbnail" loading="lazy">
-        <h3 class="project-title">Dominican Nothirix</h3>
-        <h4>React · Vite</h4>
-        <p class="project-description">
-          Premium real estate investment platform in the Dominican Republic, offering cozy homes, modern houses, and exclusive residences nationwide.
-        </p>
-        <a href="https://nothirix.com/" target="_blank" class="see-more">View Project</a>
+      <div class="skills-columns">
+        <div class="skills-column fade-in-up">
+          <h3>Front-End</h3>
+          <div class="skill-list">
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Astro</span>
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Tailwind</span>
+          </div>
+        </div>
+
+        <div class="skills-column fade-in-up">
+          <h3>Back-End</h3>
+          <div class="skill-list">
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">Express</span>
+            <span class="skill-badge">REST APIs</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">SupaBase</span>
+          </div>
+        </div>
+
+        <div class="skills-column fade-in-up">
+          <h3>Tools</h3>
+          <div class="skill-list">
+            <span class="skill-badge">Git</span>
+            <!--  <span class="skill-badge">Docker</span> -->
+            <span class="skill-badge">VSCode</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">Postman</span>
+          </div>
+        </div>
+
+        <div class="skills-column fade-in-up">
+          <h3>Other</h3>
+          <div class="skill-list">
+            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">Networking</span>
+            <span class="skill-badge">Troubleshooting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="projects-header">
+        <i class="fas fa-code"></i>
+        <h2>Projects</h2>
       </div>
 
-          <div class="project-card scale-in">
-  <img src="/Assets/Images/zoe.png" alt="Calendario Zoé - Ministry Calendar App" loading="lazy">
-  <h3 class="project-title">Worship Calendar</h3>
-  <h4>JavaScript · REST API</h4>
-  <p class="project-description">
-    Web app for worship ministry management. Features admin authentication, 
-    team scheduling, dark mode, and PDF export.
-  </p>
-  <a href="https://calendariozoe.space/" target="_blank" class="see-more">View Project</a>
-</div>
-    </div>
-  </section>
+      <div class="projects-grid">
+        <div class="project-card scale-in">
+          <img
+            src="/Assets/Images/3.png"
+            alt="3Peso Project Logo"
+            loading="lazy"
+          />
+          <h3 class="project-title">3Peso</h3>
+          <h4>Astro · Tailwind</h4>
+          <p class="project-description">
+            Dominican content group creating humorous and positive videos on
+            platforms like YouTube and Instagram.
+          </p>
+          <a href="https://3-peso.vercel.app/" target="_blank" class="see-more"
+            >View Project</a
+          >
+        </div>
 
-  <section id="about-me">
-    <div class="projects-header">
-      <i class="fas fa-user"></i>
-      <h2>About Me</h2>
-    </div>
-    <div class="about-container">
-      <p class="fade-in-left">Outside of coding, I have a passion for gaming and playing the guitar. I also enjoy spending time in nature, often retreating to cozy cabins surrounded by greenery, where I can relax, recharge, and find inspiration.</p>
-      <img src="/Assets/Images/about-me-image.jpg" alt="Miguel Ureña enjoying nature" loading="lazy" class="fade-in-right">
-    </div>
-  </section>
+        <div class="project-card scale-in">
+          <img
+            src="/Assets/Images/nothirix-thumbnail.png"
+            alt="Nothirix Real Estate Platform Thumbnail"
+            loading="lazy"
+          />
+          <h3 class="project-title">Dominican Nothirix</h3>
+          <h4>React · Vite</h4>
+          <p class="project-description">
+            Premium real estate investment platform in the Dominican Republic,
+            offering cozy homes, modern houses, and exclusive residences
+            nationwide.
+          </p>
+          <a href="https://nothirix.com/" target="_blank" class="see-more"
+            >View Project</a
+          >
+        </div>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <span class="footer-name">Miguel Ureña<span class="highlight">.</span></span>
-      <a href="#main-hero" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-      </a>
-    </div>
+        <div class="project-card scale-in">
+          <img
+            src="/Assets/Images/zoe.png"
+            alt="Calendario Zoé - Ministry Calendar App"
+            loading="lazy"
+          />
+          <h3 class="project-title">Worship Calendar</h3>
+          <h4>JavaScript · REST API</h4>
+          <p class="project-description">
+            Web app for worship ministry management. Features admin
+            authentication, team scheduling, dark mode, and PDF export.
+          </p>
+          <a
+            href="https://calendariozoe.space/"
+            target="_blank"
+            class="see-more"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
 
-    <ul class="social-media-links">
-      <li><a href="https://github.com/miguelangelurena" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
-      <li><a href="https://codepen.io/Shadow31/" target="_blank" aria-label="CodePen"><i class="fab fa-codepen"></i> CodePen</a></li>
-      <li><a href="https://www.linkedin.com/in/miguel-ure%C3%B1a-2b32892b7/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-    </ul>
+    <section id="about-me">
+      <div class="projects-header">
+        <i class="fas fa-user"></i>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-container">
+        <p class="fade-in-left">
+          Outside of coding, I have a passion for gaming and playing the guitar.
+          I also enjoy spending time in nature, often retreating to cozy cabins
+          surrounded by greenery, where I can relax, recharge, and find
+          inspiration.
+        </p>
+        <img
+          src="/Assets/Images/about-me-image.jpg"
+          alt="Miguel Ureña enjoying nature"
+          loading="lazy"
+          class="fade-in-right"
+        />
+      </div>
+    </section>
 
-    <p class="footer-copy">👨🏽‍💻 © 2026 Miguel Ureña. All rights reserved.</p>
-  </div>
-</footer>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <span class="footer-name"
+            >Miguel Ureña<span class="highlight">.</span></span
+          >
+          <a href="#main-hero" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
 
-  <script src="/Assets/styles/scripts.js"></script>
-</body>
+        <ul class="social-media-links">
+          <li>
+            <a
+              href="https://github.com/miguelangelurena"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://codepen.io/Shadow31/"
+              target="_blank"
+              aria-label="CodePen"
+              ><i class="fab fa-codepen"></i> CodePen</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/miguel-ure%C3%B1a-2b32892b7/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i> LinkedIn</a
+            >
+          </li>
+        </ul>
+
+        <p class="footer-copy">👨🏽‍💻 © 2026 Miguel Ureña. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/Assets/styles/scripts.js"></script>
+  </body>
 </html>
