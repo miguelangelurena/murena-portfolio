@@ -49,26 +49,31 @@
 </ul>
 </div>
 </nav>
-<section id="main-hero">
-<div class="hero-content">
-<h1 class="fade-in-up">Miguel Ureña</h1>
-<p class="fade-in-up">
-<span class="highlight">Full-stack software engineer</span> building
-          production-ready applications with
-          <span class="highlight">React, Astro, Node.js,</span> and
-          <span class="highlight">PostgreSQL</span>. Specialized in custom
-          software solutions, modern architecture, and scalable systems.
-        </p>
-<div class="hero-buttons fade-in-up">
-<a class="btn secondary-btn" href="mailto:anguel_miguel31@hotmail.com">
-<i class="fas fa-envelope"></i> Contact Me
-          </a>
-<a class="btn secondary-btn" href="https://www.linkedin.com/in/miguel-urena-2b32892b7/" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-<a aria-label="Download Miguel Ureña résumé as PDF" class="btn secondary-btn" download="" href="./Assets/Miguel_Urena_Resume.pdf"><i aria-hidden="true" class="fas fa-file-pdf"></i> Download Résumé</a></div>
-</div>
+<section id="main-hero" aria-labelledby="hero-heading">
+  <div class="hero-stage">
+    <!-- The diagonal lines are part of the hero background (CSS ::before). -->
+    <div class="hero-content">
+      <div class="hero-mark" aria-hidden="true">
+        <span class="hero-mark-brace">{</span><span class="hero-mark-letter">M</span><span class="hero-mark-brace">}</span>
+      </div>
+
+      <h1 id="hero-heading">Miguel Ureña</h1>
+      <p class="hero-role">Full Stack Engineer</p>
+      <p class="hero-intro">Building web applications, features<br class="hero-wide-break" /> and thoughtful user experiences.</p>
+
+      <div class="hero-bottom">
+        <a class="hero-domain" href="https://miguelurena.dev/" aria-label="Portfolio home">miguelurena.dev</a>
+        <div class="hero-actions" aria-label="Quick links">
+          <a href="#projects">Projects</a>
+          <a href="./Assets/Miguel_Urena_Resume.pdf" download>Résumé</a>
+          <a href="mailto:anguel_miguel31@hotmail.com">Contact</a>
+          <a href="https://www.linkedin.com/in/miguel-urena-2b32892b7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section id="experience">
 <div class="experience-header">
 <i class="fas fa-briefcase"></i>
