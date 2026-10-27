@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Explore the engineering behind Tesoria, a full-stack budgeting app built with React, Express, and PostgreSQL, featuring authentication, reporting, and security safeguards."
+      name="description"
+    />
+    <meta content="Miguel Ureña" name="author" />
+    <title>Tesoria Case Study | Miguel Ureña</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./Assets/styles/styles.css" rel="stylesheet" />
+    <meta content="index, follow" name="robots" />
+    <meta content="article" property="og:type" />
+    <meta content="Miguel Ureña" property="og:site_name" />
+    <meta content="Tesoria Case Study | Miguel Ureña" property="og:title" />
+    <meta
+      content="Explore the engineering behind Tesoria, a full-stack budgeting app built with React, Express, and PostgreSQL, featuring authentication, reporting, and security safeguards."
+      property="og:description"
+    />
+    <meta
+      content="https://miguelurena.dev/tesoria-case-study.html"
+      property="og:url"
+    />
+    <meta
+      content="https://miguelurena.dev/Assets/Images/social-preview.png"
+      property="og:image"
+    />
+    <meta content="1200" property="og:image:width" />
+    <meta content="630" property="og:image:height" />
+    <meta
+      content="Miguel Ureña — Full Stack Engineer, dark background with pink and white {M} monogram"
+      property="og:image:alt"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Tesoria Case Study | Miguel Ureña" name="twitter:title" />
+    <meta
+      content="Explore the engineering behind Tesoria, a full-stack budgeting app built with React, Express, and PostgreSQL, featuring authentication, reporting, and security safeguards."
+      name="twitter:description"
+    />
+    <meta
+      content="https://miguelurena.dev/Assets/Images/social-preview.png"
+      name="twitter:image"
+    />
+    <link
+      href="https://miguelurena.dev/tesoria-case-study.html"
+      rel="canonical"
+    />
+    <link href="/Assets/Images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link
+      href="/Assets/Images/favicon-32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="/Assets/Images/apple-touch-icon.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      type="image/png"
+    />
+  </head>
+  <body class="case-study-page">
+    <a class="skip-link" href="#case-main">Skip to content</a>
+    <nav aria-label="Primary navigation">
+      <div class="nav-container">
+        <ul>
+          <li><a href="./index.html#experience">Experience</a></li>
+          <li><a href="./index.html#projects">Projects</a></li>
+          <li><a href="./index.html#skills">Skills</a></li>
+          <li><a href="mailto:anguel_miguel31@hotmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="study-shell" id="case-main">
+      <a class="see-more" href="./index.html#projects">Back to projects</a>
+      <header class="study-heading">
+        <p class="study-eyebrow">ENGINEERING CASE STUDY · PERSONAL PROJECT</p>
+        <h1>Tesoria</h1>
+        <p class="study-lead">
+          A full-stack budgeting application centered on the 50/30/20 framework,
+          bringing transaction tracking, financial reporting, account recovery,
+          and security safeguards into one experience.
+        </p>
+        <div class="study-actions">
+          <a
+            class="btn secondary-btn"
+            href="https://tesoria.onrender.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Live application
+            <i
+              aria-hidden="true"
+              class="fas fa-arrow-up-right-from-square"
+            ></i></a
+          ><a
+            class="btn secondary-btn"
+            href="https://github.com/miguelangelurena/tesoria"
+            rel="noopener noreferrer"
+            target="_blank"
+            >View source <i aria-hidden="true" class="fab fa-github"></i
+          ></a>
+        </div>
+      </header>
+      <img
+        alt="Screenshot of the Tesoria budgeting dashboard"
+        class="study-hero-image"
+        decoding="async"
+        src="./Assets/Images/tesoria-thumbnail.png"
+      />
+      <section class="study-section">
+        <h2>Problem &amp; goal</h2>
+        <p>
+          Managing everyday spending across needs, wants, and savings can be
+          difficult without a clear picture of where transactions belong.
+          Tesoria organizes budgeting around the 50/30/20 rule and provides
+          immediate visual feedback as activity changes.
+        </p>
+      </section>
+      <section class="study-section">
+        <h2>What I built</h2>
+        <div class="study-feature-grid">
+          <article>
+            <h3>Transaction-based insights</h3>
+            <p>
+              Financial charts update as transactions change, keeping the
+              dashboard aligned with recorded activity.
+            </p>
+          </article>
+          <article>
+            <h3>Account access &amp; recovery</h3>
+            <p>
+              Email verification with one-time codes and a password recovery
+              flow help users manage account access.
+            </p>
+          </article>
+          <article>
+            <h3>Reports &amp; portability</h3>
+            <p>
+              A 12-month CSV export allows users to take their financial records
+              outside the application.
+            </p>
+          </article>
+          <article>
+            <h3>Security safeguards</h3>
+            <p>
+              Rate limiting, security headers, and hashed credentials are
+              included in the application's security approach.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="study-section">
+        <h2>Technical overview</h2>
+        <p>
+          <strong>Frontend:</strong> React, providing the budgeting interface
+          and interactive charts.
+        </p>
+        <p>
+          <strong>Backend:</strong> Express, supporting application
+          functionality and account-related flows.
+        </p>
+        <p>
+          <strong>Data:</strong> PostgreSQL, used by the full-stack application.
+        </p>
+        <p>
+          This describes the technologies and product capabilities documented in
+          the portfolio. Detailed schema diagrams, endpoint contracts, and
+          measured performance results are intentionally omitted until verified
+          against the repository.
+        </p>
+      </section>
+      <section class="study-section">
+        <h2>Engineering considerations</h2>
+        <ul class="study-list">
+          <li>
+            <strong>Keeping information current:</strong> The dashboard must
+            reflect newly recorded transactions without leaving users with stale
+            chart data.
+          </li>
+          <li>
+            <strong>Protecting accounts:</strong> Verification, credential
+            storage, and rate limiting are important parts of the experience,
+            not just optional additions.
+          </li>
+          <li>
+            <strong>Giving users control:</strong> CSV export supports analysis
+            and data portability beyond the application UI.
+          </li>
+        </ul>
+      </section>
+      <section class="study-section">
+        <h2>Explore the implementation</h2>
+        <p>
+          Want to examine the exact architecture or implementation details? The
+          repository is the source of truth. You can also explore the live
+          budgeting experience.
+        </p>
+        <div class="study-actions">
+          <a
+            class="btn secondary-btn"
+            href="https://github.com/miguelangelurena/tesoria"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub repository</a
+          ><a
+            class="btn secondary-btn"
+            href="https://tesoria.onrender.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Live demo</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Miguel Ureña. All rights reserved.</p>
+        <p><a href="./index.html">Return to portfolio</a></p>
+      </div>
+    </footer>
+    <script src="./Assets/styles/scripts.js"></script>
+  </body>
+</html>

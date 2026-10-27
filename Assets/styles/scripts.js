@@ -1,6 +1,7 @@
 // Enhanced scroll behavior for nav
 window.addEventListener("scroll", function () {
   const navList = document.querySelector("nav ul");
+  if (!navList) return;
   if (window.scrollY > 50) {
     navList.classList.add("scrolled");
   } else {
@@ -9,7 +10,7 @@ window.addEventListener("scroll", function () {
 });
 
 // Smooth scrolling with offset
-document.querySelectorAll("nav a:not([href^='mailto:'])").forEach((link) => {
+document.querySelectorAll("nav a[href^='#']").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     const targetId = link.getAttribute("href").substring(1);
@@ -26,7 +27,7 @@ document.querySelectorAll("nav a:not([href^='mailto:'])").forEach((link) => {
 });
 
 // Active class handling based on scroll position
-const navLinks = document.querySelectorAll("nav a:not([href^='mailto:'])");
+const navLinks = document.querySelectorAll("nav a[href^='#']");
 const sections = Array.from(document.querySelectorAll("section")).filter(
   (section) => section.id,
 );
