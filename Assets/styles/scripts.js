@@ -27,7 +27,7 @@ document.querySelectorAll("nav a[href^='#']").forEach((link) => {
 });
 
 // Active class handling based on scroll position
-const navLinks = document.querySelectorAll("nav a[href^='#']");
+const navLinks = document.querySelectorAll("nav:not(.mobile-dock) a[href^='#']");
 const sections = Array.from(document.querySelectorAll("section")).filter(
   (section) => section.id,
 );
@@ -36,7 +36,7 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const id = entry.target.id;
-      const navLink = document.querySelector(`nav a[href="#${id}"]`);
+      const navLink = document.querySelector(`nav:not(.mobile-dock) a[href="#${id}"]`);
       if (entry.isIntersecting) {
         navLinks.forEach((link) => link.classList.remove("active"));
         if (navLink) navLink.classList.add("active");
@@ -145,5 +145,53 @@ document.head.appendChild(style);
 const footerCopy = document.querySelector(".footer-copy");
 if (footerCopy) {
   const currentYear = new Date().getFullYear();
-  footerCopy.textContent = `© ${currentYear} Miguel Ureña. All rights reserved.`;
+  footerCopy.textContent = document.documentElement.lang === "es"
+    ? `© ${currentYear} Miguel Ureña. Todos los derechos reservados.`
+    : `© ${currentYear} Miguel Ureña. All rights reserved.`;
 }
+
+
+// Mobile navigation updates its active tab as the user explores each section.
+(() => {
+  const tabs = [...document.querySelectorAll('.mobile-dock .mobile-tab')];
+  if (!tabs.length) return;
+  const onCaseStudy = document.body.classList.contains('case-study-page');
+  if (onCaseStudy) return;
+  const locations = { 'main-hero': 'home', 'experience': 'work', 'projects': 'projects', 'contact': 'contact' };
+  const setActive = (sectionName) => {
+    tabs.forEach((tab) => {
+      const match = tab.dataset.section === sectionName;
+      tab.classList.toggle('is-active', match);
+      if (match) tab.setAttribute('aria-current','location');
+      else tab.removeAttribute('aria-current');
+    });
+  };
+  tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.dataset.section)));
+  const scrollTracker = () => {
+    const contact = document.getElementById('contact');
+    if (contact && contact.getBoundingClientRect().top < window.innerHeight * 0.64) {
+      setActive('contact'); return;
+    }
+    const project = document.getElementById('projects');
+    if (project && project.getBoundingClientRect().top < window.innerHeight * .44) {
+      setActive('projects'); return;
+    }
+    const work = document.getElementById('experience');
+    if (work && work.getBoundingClientRect().top < window.innerHeight * .44) {
+      setActive('work'); return;
+    }
+    setActive('home');
+  };
+  window.addEventListener('scroll', scrollTracker, {passive:true});
+  window.addEventListener('resize', scrollTracker, {passive:true});
+  scrollTracker();
+})();
+
+// Preserve the current home-page section when switching between languages.
+document.querySelectorAll('.language-switch .language-option').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (location.hash && (location.pathname.endsWith('/') || /index(?:-es)?\.html$/.test(location.pathname))) {
+      link.href = link.href.split('#')[0] + location.hash;
+    }
+  });
+});

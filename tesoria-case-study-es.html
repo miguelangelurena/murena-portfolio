@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Conoce cómo construí Tesoria, una aplicación de presupuesto con React, Express y PostgreSQL: autenticación, reportes, gestión de datos y medidas de seguridad." name="description"/>
+<meta content="Miguel Ureña" name="author"/>
+<title>Caso práctico: Tesoria | Miguel Ureña</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="./Assets/styles/styles.css" rel="stylesheet"/>
+<meta content="index, follow" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="Miguel Ureña" property="og:site_name"/>
+<meta content="Caso práctico: Tesoria | Miguel Ureña" property="og:title"/>
+<meta content="Conoce cómo construí Tesoria, una aplicación de presupuesto con React, Express y PostgreSQL: autenticación, reportes, gestión de datos y medidas de seguridad." property="og:description"/>
+<meta content="https://miguelurena.dev/tesoria-case-study-es.html" property="og:url"/>
+<meta content="https://miguelurena.dev/Assets/Images/social-preview.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Miguel Ureña — Full Stack Engineer, dark background with pink and white {M} monogram" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Caso práctico: Tesoria | Miguel Ureña" name="twitter:title"/>
+<meta content="Conoce cómo construí Tesoria, una aplicación de presupuesto con React, Express y PostgreSQL: autenticación, reportes, gestión de datos y medidas de seguridad." name="twitter:description"/>
+<meta content="https://miguelurena.dev/Assets/Images/social-preview.png" name="twitter:image"/>
+<link href="https://miguelurena.dev/tesoria-case-study-es.html" rel="canonical"/>
+<link href="./Assets/Images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="./Assets/Images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="./Assets/Images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="https://miguelurena.dev/tesoria-case-study.html" hreflang="en" rel="alternate"/><link href="https://miguelurena.dev/tesoria-case-study-es.html" hreflang="es" rel="alternate"/><link href="https://miguelurena.dev/tesoria-case-study.html" hreflang="x-default" rel="alternate"/><meta content="es_DO" property="og:locale"/></head>
+<body class="case-study-page">
+<a class="skip-link" href="#case-main">Ir al contenido</a>
+<nav aria-label="Navegación principal">
+<div class="nav-container">
+<a class="mobile-brand" href="./index-es.html#main-hero" aria-label="Ir al inicio"><span class="mobile-brand-mark" aria-hidden="true">{M}</span><span class="mobile-brand-name">Miguel <strong>Ureña</strong></span></a>
+<ul>
+<li><a href="./index-es.html#experience">Experiencia</a></li>
+<li><a href="./index-es.html#projects">Proyectos</a></li>
+<li><a href="./index-es.html#skills">Habilidades</a></li>
+<li><a href="mailto:anguelmiguel31@gmail.com">Contacto</a></li>
+</ul>
+<div aria-label="Idioma del sitio" class="language-switch" role="group"><a aria-label="View site in English" class="language-option" href="./tesoria-case-study.html" lang="en">EN</a><a aria-current="page" aria-label="Ver sitio en español" class="language-option" href="./tesoria-case-study-es.html" lang="es">ES</a></div></div>
+</nav>
+<main class="study-shell" id="case-main">
+<a class="see-more" href="./index-es.html#projects">Volver a proyectos</a>
+<header class="study-heading">
+<p class="study-eyebrow">CASO PRÁCTICO DE INGENIERÍA · PROYECTO PERSONAL</p>
+<h1>Tesoria</h1>
+<p class="study-lead">Aplicación de presupuesto personal basada en el método 50/30/20 que reúne registro de transacciones, reportes financieros, recuperación de cuentas y medidas de seguridad.</p>
+<div class="study-actions">
+<a class="btn secondary-btn" href="https://tesoria.onrender.com/" rel="noopener noreferrer" target="_blank">Aplicación en línea <i aria-hidden="true" class="fas fa-arrow-up-right-from-square"></i></a><a class="btn secondary-btn" href="https://github.com/miguelangelurena/tesoria" rel="noopener noreferrer" target="_blank">Ver código fuente <i aria-hidden="true" class="fab fa-github"></i></a>
+</div>
+</header>
+<img alt="Captura de pantalla del panel de Tesoria" class="study-hero-image" decoding="async" src="./Assets/Images/tesoria-thumbnail.png"/>
+<section class="study-section">
+<h2>Problema y objetivo</h2>
+<p>Organizar los gastos cotidianos entre necesidades, deseos y ahorro es difícil sin una visión clara de las transacciones. Tesoria aplica la regla 50/30/20 y ofrece información visual actualizada conforme cambian los movimientos.</p>
+</section>
+<section class="study-section">
+<h2>Qué desarrollé</h2>
+<div class="study-feature-grid">
+<article>
+<h3>Análisis de transacciones</h3>
+<p>Los gráficos financieros se actualizan cuando cambian las transacciones, para reflejar la información registrada.</p>
+</article>
+<article>
+<h3>Acceso y recuperación de cuentas</h3>
+<p>La verificación por correo mediante códigos de un solo uso y el proceso de recuperación de contraseñas ayudan a gestionar el acceso.</p>
+</article>
+<article>
+<h3>Informes y portabilidad</h3>
+<p>La exportación CSV de 12 meses permite consultar los registros financieros fuera de la aplicación.</p>
+</article>
+<article>
+<h3>Protecciones de seguridad</h3>
+<p>La aplicación incluye limitación de solicitudes, encabezados de seguridad y almacenamiento de contraseñas mediante hash.</p>
+</article>
+</div>
+</section>
+<section class="study-section">
+<h2>Resumen técnico</h2>
+<p><strong>Frontend:</strong> React para la interfaz de presupuesto y los gráficos interactivos.</p>
+<p><strong>Backend:</strong> Express para la lógica de la aplicación y las funciones relacionadas con las cuentas.</p>
+<p><strong>Datos:</strong> PostgreSQL como base de datos de la aplicación full stack.</p>
+<p>Esta descripción se basa en las tecnologías y funciones documentadas en el portafolio. Los diagramas de esquema, contratos de endpoints y métricas de rendimiento se omiten hasta verificarlos con el repositorio.</p>
+</section>
+<section class="study-section">
+<h2>Consideraciones de ingeniería</h2>
+<ul class="study-list">
+<li><strong>Información actualizada:</strong> El panel debe reflejar las transacciones nuevas sin mostrar gráficos desactualizados.</li>
+<li><strong>Protección de cuentas:</strong> La verificación, el almacenamiento de credenciales y la limitación de solicitudes forman parte esencial de la experiencia.</li>
+<li><strong>Control de los datos:</strong> La exportación CSV facilita el análisis y la portabilidad fuera de la interfaz de la aplicación.</li>
+</ul>
+</section>
+<section class="study-section">
+<h2>Explorar la implementación</h2>
+<p>¿Quieres revisar la arquitectura o los detalles de implementación? El repositorio es la referencia principal. También puedes explorar la aplicación en funcionamiento.</p>
+<div class="study-actions">
+<a class="btn secondary-btn" href="https://github.com/miguelangelurena/tesoria" rel="noopener noreferrer" target="_blank">Repositorio en GitHub</a><a class="btn secondary-btn" href="https://tesoria.onrender.com/" rel="noopener noreferrer" target="_blank">Ver demo</a>
+</div>
+</section>
+</main>
+<footer id="contact">
+<div class="footer-inner">
+<p class="footer-copy">© 2026 Miguel Ureña. Todos los derechos reservados.</p>
+<p><a href="./index-es.html">Volver al portafolio</a></p>
+</div>
+</footer>
+
+<!-- Mobile-first floating app navigation -->
+<nav class="mobile-dock" aria-label="Navegación móvil"><div class="mobile-dock-inner"><a class="mobile-tab" data-section="home" href="./index-es.html#main-hero"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg><span>Inicio</span></a><a class="mobile-tab" data-section="work" href="./index-es.html#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12c5.5 3.6 12.5 3.6 18 0M12 13v3"/></svg><span>Experiencia</span></a><a class="mobile-tab is-active" data-section="projects" href="./index-es.html#projects" aria-current="location"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Proyectos</span></a><a class="mobile-tab" data-section="contact" href="./index-es.html#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg><span>Contacto</span></a></div></nav>
+<script src="./Assets/styles/scripts.js"></script>
+</body>
+</html>
