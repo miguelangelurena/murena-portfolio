@@ -1432,7 +1432,6 @@ nav a:focus-visible,
   }
 }
 
-
 /* Bilingual resume downloads — prominent, keyboard-friendly, responsive. */
 .resume-downloads {
   margin: 0 0 22px;
@@ -2197,4 +2196,543 @@ nav .nav-container>ul {
 .contact-card-action:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
+}
+
+:root {
+  --color-text-muted: #a0aab4;
+  --tap-min: 44px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Reveal offsets must never create a horizontal scrollbar. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Never hide content just because JS has not run: the reveal/fade states only
+   apply once scripts.js adds the .js class to <html>. */
+img,
+.timeline-item,
+.fade-in-up,
+.fade-in-left,
+.fade-in-right,
+.scale-in {
+  opacity: 1;
+  transform: none;
+}
+
+.js img:not(.loaded) {
+  opacity: 0;
+}
+
+.js .timeline-item:not(.in-view),
+.js .fade-in-up:not(.in-view),
+.js .fade-in-left:not(.in-view),
+.js .fade-in-right:not(.in-view),
+.js .scale-in:not(.in-view) {
+  opacity: 0;
+}
+
+.js .timeline-item:not(.in-view),
+.js .fade-in-left:not(.in-view) {
+  transform: translateX(-24px);
+}
+
+.js .fade-in-up:not(.in-view) {
+  transform: translateY(24px);
+}
+
+.js .fade-in-right:not(.in-view) {
+  transform: translateX(24px);
+}
+
+.js .scale-in:not(.in-view) {
+  transform: scale(0.96);
+}
+
+@media (max-width: 760px) {
+
+  .js .timeline-item:not(.in-view),
+  .js .fade-in-left:not(.in-view),
+  .js .fade-in-right:not(.in-view) {
+    transform: translateY(20px);
+  }
+
+  .about-container p,
+  .about-container img {
+    animation: none;
+  }
+}
+
+/* ---- Navigation: readable and tappable on every screen ------------------ */
+nav {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+nav ul {
+  gap: 0;
+  padding: 0.2rem 0.5rem;
+  margin-inline: auto;
+}
+
+nav li {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+nav li a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+}
+
+nav ul.scrolled {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(14, 20, 27, 0.85);
+}
+
+nav a.active {
+  color: var(--color-primary);
+}
+
+nav a[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+@media (max-width: 430px) {
+  nav .nav-container {
+    max-width: 100%;
+    margin: 0.3rem auto;
+  }
+
+  nav .nav-container li {
+    font-size: 0.78rem;
+    padding: 0;
+  }
+
+  nav li a {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+  nav ul {
+    padding-inline: 0.25rem;
+  }
+
+  nav .nav-container li {
+    font-size: 0.72rem;
+  }
+
+  nav li a {
+    padding: 0 0.3rem;
+  }
+}
+
+/* ---- Section headings: one consistent scale and left edge --------------- */
+.experience-header,
+.skills-header,
+.projects-header {
+  gap: 0.6rem;
+  margin: 0 0 1.4rem;
+}
+
+.experience-header h2,
+.skills-header h2,
+.projects-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.experience-header i,
+.skills-header i,
+.projects-header i {
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+#experience,
+#skills,
+#projects,
+#about-me {
+  max-width: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 2.5rem auto;
+  text-align: left;
+}
+
+#projects,
+#skills,
+#experience,
+#about-me {
+  scroll-margin-top: 72px;
+}
+
+@media (max-width: 600px) {
+
+  #experience,
+  #skills,
+  #projects,
+  #about-me {
+    padding-inline: 1.25rem;
+    margin-block: 2rem;
+  }
+}
+
+/* ---- Timeline: align header row, tighten mobile spacing ----------------- */
+.tl-top {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.tl-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.timeline-content .tl-meta .description {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #8a96a3;
+  line-height: 1.4;
+}
+
+.job-title {
+  line-height: 1.3;
+}
+
+.tl-badge {
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+.timeline-content .description {
+  color: var(--color-text-muted);
+}
+
+.timeline-content .description:last-of-type {
+  margin-bottom: 0.9rem;
+}
+
+.tl-footer {
+  padding-top: 0.2rem;
+}
+
+.tl-tag {
+  color: #8b99a8;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.1rem;
+  }
+
+  .timeline-dot {
+    left: -1.1rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .tl-top {
+    flex-wrap: wrap;
+  }
+
+  .tl-meta {
+    flex-basis: calc(100% - 56px);
+  }
+
+  .tl-top .tl-badge {
+    order: 3;
+    margin-left: 52px;
+  }
+
+  .timeline-content .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* ---- See-more / project links: real tap targets ------------------------- */
+.see-more {
+  min-height: var(--tap-min);
+  padding-block: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.timeline-content .see-more {
+  margin-left: auto;
+}
+
+.see-more:focus-visible,
+.hero-actions a:focus-visible,
+.hero-domain:focus-visible,
+.skill-badge:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Skills: two columns when there is room ----------------------------- */
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+.skills-column h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+@media (min-width: 560px) {
+  .skills-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem 2rem;
+  }
+}
+
+.skill-badge {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+}
+
+/* ---- Projects: even cards, pinned links, calmer hierarchy --------------- */
+.projects-grid {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  justify-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+}
+
+.project-card img {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #fff;
+}
+
+.project-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  margin: 1rem 0 0.25rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.project-card h4 {
+  margin: 0 0 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #8b99a8;
+  letter-spacing: 0.01em;
+}
+
+.project-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  margin-top: auto;
+  gap: 0 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+@media (hover: none) {
+
+  .project-card:hover,
+  .timeline-item:hover .timeline-content {
+    transform: none;
+  }
+}
+
+/* ---- About: muted body text, centered with photo ------------------------ */
+.about-container {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-container p {
+  flex: 1 1 0;
+  max-width: 46ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.about-container img {
+  flex: 0 0 auto;
+  width: 40%;
+  max-width: 240px;
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .about-container p {
+    max-width: none;
+  }
+
+  .about-container img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ---- Hero: bigger tap targets for the quick links ----------------------- */
+.hero-actions a,
+.hero-domain {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    gap: 0 1rem;
+  }
+
+  .hero-actions a {
+    min-height: 40px;
+  }
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.back-to-top {
+  width: 44px;
+  height: 44px;
+}
+
+footer .social-media-links a {
+  min-height: 40px;
+}
+
+@media (max-width: 430px) {
+  footer .social-media-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 1.25rem;
+  }
+
+  footer .social-media-links i {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+}
+
+footer {
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.footer-copy {
+  opacity: 0.75;
+}
+
+/* ---- Case study page ---------------------------------------------------- */
+.study-shell {
+  padding-top: 1rem;
+}
+
+.study-lead,
+.study-section p,
+.study-list {
+  max-width: 68ch;
+}
+
+.study-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--tap-min);
+  padding: 0.5rem 1.4rem;
+  color: var(--color-text);
+}
+
+.study-actions .btn:hover {
+  background-color: var(--color-primary);
+}
+
+.study-section {
+  margin-top: 2.25rem;
+}
+
+.study-section h2 {
+  margin: 0 0 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .study-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .study-feature-grid {
+    gap: 0.75rem;
+  }
+}
+
+.case-study-page .footer-inner p {
+  margin: 0 0 0.75rem;
+}
+
+.case-study-page .footer-inner a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  color: var(--color-primary);
+}
+
+/* ---- Motion preferences: skip reveal states entirely -------------------- */
+@media (prefers-reduced-motion: reduce) {
+
+  .js .timeline-item,
+  .js .fade-in-up,
+  .js .fade-in-left,
+  .js .fade-in-right,
+  .js .scale-in,
+  .js img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

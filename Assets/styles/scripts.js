@@ -1,3 +1,7 @@
+// Mark the document as JS-enabled so CSS only hides reveal-on-scroll content
+// when something is actually going to reveal it.
+document.documentElement.classList.add("js");
+
 // Enhanced scroll behavior for nav
 window.addEventListener("scroll", function () {
   const navList = document.querySelector("nav ul");
